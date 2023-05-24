@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encriptador</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js"></script>
 </head>
+
 <body>
   <header>
     <!-- Contenido del encabezado -->
-    <h1>Encriptador</h1>
+    <!-- Logo -->
+    <h1 class="logo">
+      <img src="img/logo.png" alt="Logo Alura"> <!-- Imagen del logo -->
+    </h1>
   </header>
 
   <main>
     <!-- Contenido principal de la página -->
+    <!-- Entrada de texto -->
+    <section class="text-work">
+      <!-- Lista desplegable -->
+      <div class="cypher-selector">
+        <label for="cipher-type">Tipo de cifrado</label>
+        <select id="cipher-type">
+          <option value="cipher-0">Selecciona un tipo de cifrado</option>
+          <option value="cipher-1">Alura Challenge</option>
+        </select>
+      </div>
+      <!-- Área del texto -->
+      <textarea id="text-entry" placeholder="Escribe tu mensaje secreto"></textarea>
+
+      <!-- Botones -->
+      <div class="cypher-buttons">
+        <button id="cipher-button">Encriptar</button>
+        <button id="decipher-button">Desencriptar</button>
+      </div>
+    </section>
+
+    <!-- Salida de texto -->
+    <section class="text-result">
+      <!-- Imagen de espera -->
+      <img src="img/Muneco.png" alt="Imagen espera" id="vector" class="vector">
+      <!-- Mensaje de espera -->
+      <p class="text-waiting">¡Esperando un mensaje!</p>
+
+      <!-- Contenedor oculto para el resultado -->
+      <div class="hidden-result" id="hidden-result">
+        <div class="result">
+          <h2>¡Muy bien! Tu mensaje es:</h2>
+          <!-- Resultado del cifrado o descifrado -->
+          <p class="showResult" id="showResult"></p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -22,4 +64,5 @@
     <p>Derechos de autor &copy; 2023 - Encriptador</p>
   </footer>
 </body>
+
 </html>
