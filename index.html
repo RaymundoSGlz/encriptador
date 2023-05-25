@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encriptador</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="js/app.js"></script>
 </head>
 
@@ -21,47 +21,66 @@
 
   <main>
     <!-- Contenido principal de la página -->
-    <!-- Entrada de texto -->
-    <section class="text-work">
-      <!-- Lista desplegable -->
-      <div class="cypher-selector">
-        <label for="cipher-type">Tipo de cifrado</label>
-        <select id="cipher-type">
-          <option value="cipher-0">Selecciona un tipo de cifrado</option>
-          <option value="cipher-1">Alura Challenge</option>
-        </select>
-      </div>
-      <!-- Área del texto -->
-      <textarea id="text-entry" placeholder="Escribe tu mensaje secreto"></textarea>
-
-      <!-- Botones -->
-      <div class="cypher-buttons">
-        <button id="cipher-button">Encriptar</button>
-        <button id="decipher-button">Desencriptar</button>
-      </div>
-    </section>
-
-    <!-- Salida de texto -->
-    <section class="text-result">
-      <!-- Imagen de espera -->
-      <img src="img/Muneco.png" alt="Imagen espera" id="vector" class="vector">
-      <!-- Mensaje de espera -->
-      <p class="text-waiting">¡Esperando un mensaje!</p>
-
-      <!-- Contenedor oculto para el resultado -->
-      <div class="hidden-result" id="hidden-result">
-        <div class="result">
-          <h2>¡Muy bien! Tu mensaje es:</h2>
-          <!-- Resultado del cifrado o descifrado -->
-          <p class="showResult" id="showResult"></p>
+    <div class="main-container">
+      <!-- Entrada de texto -->
+      <section class="text-work">
+        <!-- Área del texto -->
+        <div class="text-area">
+          <textarea id="text-entry" placeholder="Escribe tu mensaje secreto"></textarea>
         </div>
-      </div>
-    </section>
+        <!-- Lista desplegable -->
+        <div class="cipher-selector">
+          <select id="cipher-type" onchange="showWarning()">
+            <option value="cipher-0">Selecciona un tipo de cifrado</option>
+            <option value="cipher-1">Alura Challenge</option>
+          </select>
+        </div>
+        <!-- Advertencia -->
+        <div class="warning">
+          <img src="img/warning.png" alt="Advertencia">
+          <p id="warning">Esperando método de cifrado</p>
+        </div>
+
+        <!-- Botones -->
+        <div class="cipher-buttons">
+          <button id="cipher-button">Encriptar</button>
+          <button id="decipher-button">Desencriptar</button>
+        </div>
+      </section>
+
+      <!-- Salida de texto -->
+      <section class="text-result">
+        <div class="result-container">
+          <!-- Imagen de espera -->
+          <img src="img/Muneco.png" alt="Imagen espera" id="vector" class="vector">
+          <!-- Mensaje de espera -->
+          <p class="text-waiting">¡Esperando un mensaje!</p>
+        </div>
+        <!-- Contenedor oculto para el resultado -->
+        <div class="hidden-result" id="hidden-result">
+          <div class="result">
+            <!-- Resultado del cifrado o descifrado -->
+            <p class="showResult" id="showResult"></p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
     <!-- Contenido del pie de página -->
-    <p>Derechos de autor &copy; 2023 - Encriptador</p>
+    <div class="footer-container">
+      <p class="footer-title">Desarrollado por Raymundo Gonzalez</p>
+      <div class="footer-social">
+        <a href="https://github.com/RaymundoSGlz"><img src="https://img.icons8.com/bubbles/50/000000/github.png"
+            alt="GitHub" /></a>
+        <a href="https://www.linkedin.com/in/raymundoglz/"><img
+            src="https://img.icons8.com/bubbles/50/000000/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Encriptador del Programa One. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 
