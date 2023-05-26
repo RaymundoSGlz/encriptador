@@ -59,10 +59,13 @@
         </div>
         <!-- Contenedor oculto para el resultado -->
         <div class="hidden-result" id="hidden-result">
-          <div class="result">
             <!-- Resultado del cifrado o descifrado -->
             <p class="showResult" id="showResult"></p>
-          </div>
+            <div class="result-buttons">
+              <!-- Botones para copiar el resultado -->
+              <button id="copy-button" onclick="copyResult()" style="display: none;">Copiar</button>
+              <button id="clear-button" onclick="clearResult()" style="display: none;">Limpiar</button>
+            </div>
         </div>
       </section>
     </div>

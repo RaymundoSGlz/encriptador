@@ -63,9 +63,13 @@ function showResult() {
     textElement.value = lowercaseText; // Reemplazamos el texto en el input
     resultElement.textContent = cifrarDescifrar(lowercaseText, type); // trabajamos con el texto transformado
     resultElement.style.display = "block";
+    document.getElementById("copy-button").style.display = "block"; // Muestra el botón de copiar
+    document.getElementById("clear-button").style.display = "block"; // Muestra el botón de limpiar
   } else {
     resultElement.textContent = cifrarDescifrar(textElement.value, type);
     resultElement.style.display = "block";
+    document.getElementById("copy-button").style.display = "block"; // Muestra el botón de copiar
+    document.getElementById("clear-button").style.display = "block"; // Muestra el botón de limpiar
   }
 }
 
@@ -80,4 +84,22 @@ function start(action) { // Recibimos la acción a realizar
   else {
     showResult();
   }
+}
+
+// Función para copiar el resultado
+function copyResult() {
+  const result = document.getElementById("showResult");
+  navigator.clipboard.writeText(result.textContent);
+}
+
+// Función para limpiar el resultado
+function clearResult() {
+  const result = document.getElementById("showResult");
+  const text = document.getElementById("text-entry");
+  result.textContent = "";
+  text.value = "";
+  document.getElementById("copy-button").style.display = "none"; // Oculta el botón de copiar
+  document.getElementById("clear-button").style.display = "none"; // Oculta el botón de limpiar
+  showImage = document.querySelector(".result-container")
+  showImage.style.visibility = "visible"; // Muestra la imagen
 }
