@@ -26,13 +26,14 @@
       <section class="text-work">
         <!-- Área del texto -->
         <div class="text-area">
-          <textarea id="text-entry" placeholder="Escribe tu mensaje secreto"></textarea>
+          <textarea id="text-entry" placeholder="Ingrese el texto aquí"></textarea>
         </div>
         <!-- Lista desplegable -->
         <div class="cipher-selector">
-          <select id="cipher-type" onchange="showWarning()">
+          <select id="cipher-type" onchange="cipherType()">
             <option value="cipher-0">Selecciona un tipo de cifrado</option>
             <option value="cipher-1">Alura Challenge</option>
+            <option value="cipher-2">Cifrado extra</option>
           </select>
         </div>
         <!-- Advertencia -->
@@ -43,8 +44,8 @@
 
         <!-- Botones -->
         <div class="cipher-buttons">
-          <button id="cipher-button">Encriptar</button>
-          <button id="decipher-button">Desencriptar</button>
+          <button id="cipher-button" onclick="start('encrypt')">Encriptar</button>
+          <button id="decipher-button" onclick="start('decrypt')">Desencriptar</button>
         </div>
       </section>
 

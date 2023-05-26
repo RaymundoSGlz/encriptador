@@ -157,7 +157,7 @@ body {
 
 /* Imagen */
 .result-container,
-.hidden-text {
+.hidden-result {
   position: absolute;
   top: 0;
   left: 0;
@@ -194,7 +194,7 @@ body {
 }
 
 /* Texto */
-.result {
+.hidden-result {
   height: 95%;
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@ body {
   justify-content: center;
 }
 
-.show-result {
+.showResult {
   background: none;
   border: none;
   outline: none;
