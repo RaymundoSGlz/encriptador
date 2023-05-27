@@ -1,33 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
-/* modelo de caja para todos los elementos */
+/* Modelo de caja para todos los elementos */
 * {
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
 }
 
-/* color de fondo con degradado */
+/* Color de fondo con degradado */
 body {
   margin: 0;
-  background: linear-gradient(to right, #b483e3 45%, #8a56e2);
-  color: #052051;
+  background: linear-gradient(to right, #e8e8e8 45%, #d4d4d4);
+  color: #333333;
 }
 
-/*image background
-body {
-  background-image: url("../.temp/3b.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}*/
-
-/* estilos para el header */
-/*logo*/
+/* Estilos para el header */
+/* Logo */
 .logo {
   padding: 1em 0;
   background-color: none;
-
 }
 
 /* Contenedor principal */
@@ -36,14 +26,14 @@ body {
   height: calc(100vh - 84px);
 }
 
-/* Area de trabajo y resultado */
+/* Área de trabajo y resultado */
 .text-work,
 .text-result {
   float: left;
   height: 100%;
 }
 
-/* Area de trabajo */
+/* Área de trabajo */
 .text-work {
   width: 70%;
   display: flex;
@@ -69,14 +59,14 @@ body {
   font-size: 2em;
   line-height: 1.5;
   padding: 1em;
-  color: #052051;
+  color: #333333;
 }
 
-.texto textarea::placeholder {
-  color: #072b61;
+.text-area textarea::placeholder {
+  color: #777777;
 }
 
-/* lista de opciones */
+/* Lista de opciones */
 .cipher-selector {
   margin-bottom: 20px;
 }
@@ -91,7 +81,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
-  color: #052051;
+  color: #333333;
 }
 
 /* Advertencia */
@@ -125,9 +115,9 @@ body {
 }
 
 .cipher-buttons button:first-child {
-  background-color: #4206aa;
+  background-color: #333333;
   color: white;
-  border: 2px solid #052051;
+  border: 2px solid #333333;
 }
 
 .cipher-buttons button:first-child:hover {
@@ -136,16 +126,16 @@ body {
 
 .cipher-buttons button:last-child {
   background-color: white;
-  color: #052051;
-  border: 2px solid #052051;
+  color: #333333;
+  border: 2px solid #333333;
 }
 
 .cipher-buttons button:last-child:hover {
-  background-color: #aab2d5;
-  color: #052051;
+  background-color: #d8d8d8;
+  color: #333333;
 }
 
-/* Area de resultados */
+/* Área de resultados */
 .text-result {
   width: 30%;
   display: flex;
@@ -172,7 +162,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 35px;
-  background-color: #ffffff90;
+  background-color: #ffffff;
 }
 
 .vector {
@@ -180,17 +170,16 @@ body {
   margin: 0;
 }
 
-.result-container h2,
 .result-container p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
   font-weight: bold;
-  color: #000;
+  color: #333333;
 }
 
 .result-container p {
   padding: 0 1em;
-  color: #495057;
+  color: #555555;
 }
 
 /* Texto */
@@ -234,8 +223,8 @@ body {
   border-radius: 25px;
   cursor: pointer;
   background-color: white;
-  color: #052051;
-  border: 2px solid #052051;
+  color: #333333;
+  border: 2px solid #333333;
 }
 
 .result-buttons button:first-child {
@@ -250,13 +239,13 @@ body {
 }
 
 .result-buttons button:hover {
-  background-color: #aab2d5;
-  color: #052051;
+  background-color: #d8d8d8;
+  color: #333333;
 }
 
 /* Estilos para el footer */
 footer {
-  background-color: #052051;
+  background-color: #333333;
   color: white;
   padding: 20px;
   font-family: 'Roboto Mono', monospace;
